@@ -4,14 +4,14 @@
     <title>Ejercicio 02 - Formularios en HTML</title>
   </head>
   <body>
-    <form action="/"></form>
+    <form action="/">
     <div>
       <label for="nombre">Nombre</label>
       <input type="text" name="nombre" id="nombre" />
     </div>
     <div>
       <label for="edad">Edad</label>
-      <input type="number" name="edad" id="edad" />
+      <input type="number" name="edad" id="edad" min="0" max="150" />
     </div>
     <div>
       <label for="frase-favorita">frase-favorita</label>
@@ -19,6 +19,7 @@
     </div>
     <button type="submit">Enviar</button>
     <button type="reset">Reset</button>
+  </form>
   </body>
 </html>
 <!--
