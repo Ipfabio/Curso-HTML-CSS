@@ -1,0 +1,36 @@
+h1{
+    color: red;
+}
+
+/*Estoy probando colores y fuentes*/
+p{
+    color: blue;
+    font-size: 16pt;
+}
+
+/*Esto es para los ID. Además, si ponemos p#primera-noticia, solo afecta a los parrafos que tenga ese id, por si el mismo es compartido por otras etiquetas*/
+#primera-noticia {
+    color: green;
+    font-size: 12pt;
+}
+
+#segunda-noticia{
+    color: darkmagenta;
+}
+
+/*Esto es para las clases*/
+.encabezado{
+    font-size: 24pt;
+    text-transform: uppercase;
+}
+
+/*El '*' es el 'Selector universal' que marca todo, se le puede decir, TODAS LAS CLASES WARNING como se declara abajo o solo usar '*' y que afecte a todo
+lo que no tenga el estilo que declaramos: ej. si no tiene un color definido se le aplica el universal*/
+*.warning{
+    color: red;
+}
+
+/*Separando con comas podemos ponerles el mismo estilo a distintos selectores, pueden ser '.clase', '#id', o 'p' etiqueta*/
+.autor, .fecha, .ubicacion, h1, #segunda-noticia{
+    text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+/* Estilos para colores */
+.colores {
+    color: orangered;
+}
+
+.color-hexadecimal {
+    color: #BCE784;
+}
+
+.color-rgb {
+    /* Tenemos de 0 a 255 */
+    color: rgb(53, 71, 226);
+}
+
+.color-rgba {
+    color: rgba(10, 10, 10, 0.85);
+}
+
+/* Fondos */
+.fondo {
+    /*background-color: cornflowerblue;*/
+    background-image: url(https://images5.alphacoders.com/114/1141137.jpg);
+    background-position: left bottom;
+}
+
+.fondo-interno {
+    /*background-color: cornflowerblue;*/
+    background-image: url(Imagenes/jujutsu.jpg);
+    background-position: center center;
+}
+
+/* Tamaños */
+.ancho {
+    background-color: #BCE784;
+    width: 100px;
+}
+
+.alto {
+    background-color: aquamarine;
+    height: 200px;
+}
+
+.tarjeta {
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
+    /* border-top: none */
+    padding: 10px 20px;
+    /* El padding hace referencia al espacio interno. Desde los bordes del contenedor hasta el espacio del contenido
+    Según la cantidad de parametros pasados, afecta en el siguiente orden, 10 = todo; 10 20 = vertical horizontal; 10 20 30 = arriba izq&der abajo; 10 20 30 40 = arriba der abajo izq
+    Sentido de las agujas del reloj*/
+    margin: 10px 20px;
+    /*afecta en el siguiente orden, 10 = todo; 10 20 = vertical horizontal; 10 20 30 = arriba izq&der abajo; 10 20 30 40 = arriba der abajo izq
+    Sentido de las agujas del reloj*/
+    /* El margen es el espacio que separa los contenedores, los unos de los otros con respecto a DOM */
+
+}
