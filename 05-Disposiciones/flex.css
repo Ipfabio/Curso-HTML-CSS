@@ -1,0 +1,34 @@
+.flex {
+    display: flex;
+    background-color: yellow;
+    height: 300px;
+    justify-content: space-around;
+    /* Space around distribuye el espacio sobrante al rededor de los objetos, 
+     mientras que between lo hace entre ellos */
+    flex-wrap: nowrap;
+    /* Por defecto viene en nowrap, es decir, altera su height para cumplir con el justify content
+    Al cambiarlo a wrap, lo "envolvemos" obligando a que mantengan su tamaño bajando los items que no entran en pantalla */
+}
+
+.contenido-1 {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue;
+
+}
+
+.contenido-2 {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue;
+
+}
+
+.contenido-3 {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue;
+}
