@@ -1,0 +1,49 @@
+.contenedor-hidden {
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: hidden;
+    /* Todo lo que sobresale se esconde */
+}
+
+.contenedor-scroll{
+    margin: 10px 0px;
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: scroll;
+    /* Todo lo que sobresale se esconde */
+}
+
+.contenedor-visible{
+    margin: 10px 0px;
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: visible;
+    /* Éste es el que aparece por defecto*/
+}
+
+.contenedor-auto{
+    margin: 10px 0px;
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow: auto;
+    /* El auto elige la "mejor optimización*/
+}
+
+.contenedor-scroll-x {
+    margin: 10px 0px;
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* De ésta manera escondemos la barra scroll de izq a der y mostramos de arriba a abajo */
+}

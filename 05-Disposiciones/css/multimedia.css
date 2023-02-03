@@ -1,0 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.imagen-principal {
+width: 100vw; /* Esto sería el 100% de toda la pantalla*/
+}
