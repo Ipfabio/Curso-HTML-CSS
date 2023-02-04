@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Con esto pedimos que cubra por complet+(width y height) evitando que se comprima y queden espacios en blanco*/
+    position: fixed;
+}
+
+.header {
+    height: 100vh; /* Le ceoncedemos al header todo el alto de la pantalla*/
+    position: relative; /* Para que se visualice*/
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Para que se pongan los elementos en columna*/
+    gap: 10px; /* Se distancien 10 px*/
+    justify-content: center;
+    align-items: center;
+}
