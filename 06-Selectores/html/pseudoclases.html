@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pseudo-Clases</title>
+    <!-- https://www.w3schools.com/css/css_pseudo_classes.asp -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .hover {
+            width: 300px;
+            height: 100px;
+            background-color: bisque;
+        }
+
+        .hover:hover { /* Se activa en cuanto el ratón pasa por encima */
+            background-color: burlywood;
+        }
+
+        .listado {
+            padding: 15px;
+            background-color: aquamarine;
+        }
+
+        .listado p:first-child { /* De ésta manera afecta a todos los 'p' que sean "Primer elemento", dentro de la clase '.listado' */
+        /* Si removieramos la clase, 'p:first-child'  Haría referencia a todos los 'p' que sean "primer hijo" (primer elemento) */
+            color: white;
+        }
+
+        a:link { /* Link no visitado todavía */
+            color: deeppink;
+        }
+
+        a:visited { /* Ya visitado */
+            color: crimson;
+        }
+
+        a:hover{
+            color: pink;
+        }
+
+        a:active{
+            color: greenyellow;
+        }
+/* Es IMPORTANTE destacar que estas pseudo-clases deben seguir este orden realizado para evitar pisarse */
+    </style>
+  </head>
+  <body>
+    <div class="hover">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsum exercitationem in dignissimos eligendi assumenda sint labore, consequatur culpa placeat enim, laboriosam nulla iusto alias quidem incidunt rem molestiae natus.</p>
+    </div>
+    <div class="listado">
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+    </div>
+    <div class="enlaces">
+        <a href="http://google.com" target="_blank">Enlace a Google</a>
+    </div>
+  </body>
+</html>
+ <!-- peudoclases: hacen referencia a distintos estados -->

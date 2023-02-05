@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #333;
+}
+/* Termino de acomodar la base y empiezo con el botón */
+
+.btn {
+    background: #3b89b5;
+    padding: 2.5rem 7rem;
+    border: .1rem solid #4896c4;
+    cursor: pointer;
+    border: .3rem;
+    overflow: hidden;
+}
+
+/* Establezco lo que va a decir y su ubicación */
+.btn::before {
+    content: 'Pasa por encima';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* Lo mismo que el anterior pero le pongo opacidad 0 para ocultarlo */
+.btn::after {
+    content: '¡Hecho!';
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.btn:hover::before {
+    opacity: 0;
+}
+/* Cambio las opacidad para generar "el cambio de texto" y el background del btn */
+.btn:hover {
+    background-color: green;
+}
+
+.btn:hover::after {
+    opacity: 1;
+}
+
+/*  Consigna:
+Utiliza las pseudo-clases para que cuando se pase el ratón por encima de este botón, el texto se vuelva blanco y el fondo de color verde
+
+Utiliza los pseudo-elementos para cambiar el texto del botón a "¡Hecho!"
+*/

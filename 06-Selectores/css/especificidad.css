@@ -1,0 +1,35 @@
+/* NIVEL DE ESPECIFICIDAD */
+    /* (1, 0, 0) */ 
+    /* (0, 1, 0) */
+    /* (0, 0, 1) */
+    /* (0, 0, 0) */
+
+
+h1#h1-id.h1-clase {
+    color: darksalmon;
+}
+
+#h1-id {
+    color: aqua;
+}
+
+.h1-clase {
+    color: yellow;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+/*
+ utiliar '!important' en cualquiera de los anteriores en el archivo css lo sube en la cadena, pero se recomienda no hacer uso/ abuso de ella
+ El style en linea (directamente del html) es más importante que el id
+ El selector de Id tiene más importancia que clase
+ El selector de clase tiene más especificidad que el selector de etiqueta (Es decir, tiene más peso) 
+ */
+
+/* Se pueden anidar id's  ej: #h1-id\ #otro-id*/
