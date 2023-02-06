@@ -4,8 +4,9 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-html {
+body {
     background-color: #161717;
+    color: white;
 }
 
 .container {
@@ -108,7 +109,6 @@ label {
 
 label span {
     font-weight: 700;
-    color: white;
 }
 
 .section-inputs label input {
