@@ -1,0 +1,50 @@
+.padre {
+    width: 400px;
+    height:400px ;
+    background-color: blue;
+}
+
+.hijo {
+    width: 50%;
+    height: 50%;
+    background-color: beige;
+    /* transition: all 150ms; */ /* Con este indicamos que todo cambio es una transición de ese tiempo*/
+    /* transition: transform 1s ease-in ; */ /* Mientras que acá declaramos que solo el transform se afecte por la transición de 1s*/
+    /* Transition tiene como tercer parametro que por default  'ease' que es como se ejecuta el movimiento podemos probar y generar distintos estilos desde la herramienta de desarrollador del navegador ej. cubic-bezier(0.075, 0.11, 0.5, 1.44) */
+    /* Transition tiene como cuarto parametro el delay con el que ejecuta la animación, por default es 0 */
+    animation: traslacion 4s ease-in-out infinite forwards alternate; 
+    /* Si ponemos animation fuera del hover, se ejecuta constantemente */
+}
+
+.padre:hover .hijo {
+    /* transform: translateX(100%);
+    background-color: blueviolet; */
+    animation-play-state: paused; /* así indicamos que se pare cuando hacemos hover */
+    /* animation: traslacion 4s ease-in-out infinite forwards alternate;  */
+    /* Animation: traslacion: Inventado en el momento 1s = duración, También se pueden poner ease por ej como en el anterior, forwards= mantiene el estado 100% */
+    /* Animation: Al indicarle un número después del tiempo, lo toma como valor de cantidad de veces que repetir el proceso */
+    /* Animation: podemos cambiarle ese número por 'infinite' para que se mantenga haciendo y 'alternate' se le agrega para que varíe donde comienza */
+}
+
+@keyframes traslacion {
+    0% {
+        background-color: beige;
+        transform: translateX(0%) translateY(0%);
+    }
+    25% {
+        background-color: red;
+        transform: translateX(100%) translateY(0%);
+    }
+    50% {
+        background-color: orange;
+        transform: translateX(100%) translateY(100%);
+    }
+    75% {
+        background-color: pink;
+        transform: translateX(0%) translateY(100%);
+    }
+    100% {
+        background-color: darkorange;
+        transform: translateX(0%) translateY(0%);
+    }
+}
