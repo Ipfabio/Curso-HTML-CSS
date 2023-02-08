@@ -1,0 +1,56 @@
+h1 {
+    color: red;
+    font-size: 4rem;
+}
+
+p {
+    color: black;
+    font-size: 2rem;
+}
+
+/* @media print es para cuando se realiza una impresión, and (menor o mayor a cierta cantidad) */
+/* @media all and (max-width: 576px) ==  @media (max-width: 576px) */
+/* @media (max-width: 576px) {
+    h1{
+        color: blue;
+    }
+    
+} */
+
+@media (min-width: 576px) {
+    h1 {
+        color: green;
+    }
+}
+
+@media (min-width: 995px) {
+    h1 {
+        color: blue;
+    }
+}
+
+/* @media(min-height: 300px){
+    p {
+        color: cyan;
+    }
+} */
+
+/* Acá declaramos que se aplique cuando cumpla una condición U otra */
+@media(min-height: 300px), (min-width: 1100px) { 
+    h1 {
+        color: darksalmon;
+    }
+}
+
+/* Momento en el que la altura es menor que la anchura */
+/*@media (orientation: landscape) {
+    p {
+        color: brown;
+    }
+}*/
+/* Lo mismo que el anterior pero añadiendole otra condición, cuando ambas se cumplan se aplica */
+@media (orientation: landscape) and (min-height: 400px) {
+    p {
+        color: brown;
+    }
+}

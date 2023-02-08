@@ -1,0 +1,20 @@
+.escenario {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.escenario-1 {
+    font-size: 32px;
+}
+
+.escenario-2 {
+    font-size: 16px;
+}
+
+.em { /* Hace referencia al tamaño de fuente de su contenedor */
+    font-size: 2em;
+}
+
+.rem { /* Hace referencia al tamaño de fuente no del contenedor, sino de la raíz. Ej. configuración de accesibilidad dentro de nuestro dispositivo */
+    font-size: 2rem;
+}
