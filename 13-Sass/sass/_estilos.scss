@@ -1,0 +1,40 @@
+@import "mixins";
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    padding: .5rem;
+}
+
+h1 {
+    margin: 0;
+    @include mixins.formato-texto();
+}
+
+p {
+    @include mixins.formato-texto(#666666);
+}
+
+// Si (por ejemplo) tenemos una lista, sass nos permite "anidar" entre ellos de una manera más "legible"
+.listado {
+    width: 10rem;
+    background-color: aquamarine;
+    padding: .5rem;
+    
+    ul {
+        margin: 0 .5rem;
+
+        li {
+            list-style: none;
+// Podemos también hacer uso de subclases como hover, after, before, etc. añdiendo según que querramos afectar en la anidación, '&:hover'
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

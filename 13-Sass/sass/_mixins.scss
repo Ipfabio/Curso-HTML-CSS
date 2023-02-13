@@ -1,0 +1,12 @@
+$text-color: #2b2b2b;
+// Así se declaran las variables en scss
+
+@mixin formato-texto($bg-color: #f1f1f1) { // Le podemos indicar un valor por defecto poniendole los 2 puntos o dejarlo vacío para que sea obligatorio pasarle al llamarla
+    color: $text-color;
+    text-transform: uppercase;
+    width: 50rem;
+    background-color: $bg-color;
+}
+// Mixin, se definen con un arroba y después ponemos el nombre
+// Además de poder guardar varias configuraciones, pueden aceptar parametros
+// Le pasamos los parametros y decimos a que devería aplicarse, luego al "llamar a la función" debemos pasarle los o el valor.

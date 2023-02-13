@@ -1,0 +1,22 @@
+.btn {
+    border: none;
+    padding: .25rem .5rem;
+    color: #2b2b2b;
+
+    &:hover {
+        background-color: cyan;
+        color: red;
+        cursor: pointer;
+    }
+}
+
+// En este caso podríamos crear un mixing o un extend
+
+.btn-2 {
+    @extend .btn; // así se extiende de otro estilo
+    margin: .5rem;
+    border-radius: .25rem;
+    border-radius: 2rem;
+}
+// Todos los archivos que tengan una barra baja por delante, el compilador no los va a compilar
+// Lo que tenemos que hacer es importarlos dentro de nuestro archivo 'scss' principal

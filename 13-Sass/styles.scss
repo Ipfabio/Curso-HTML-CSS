@@ -1,51 +1,22 @@
-@mixin formato-texto($bg-color: #f1f1f1) { // Le podemos indicar un valor por defecto poniendole los 2 puntos o dejarlo vacío para que sea obligatorio pasarle al llamarla
-    color: $text-color;
-    text-transform: uppercase;
-    width: 50rem;
-    background-color: $bg-color;
-}
-// Mixin, se definen con un arroba y después ponemos el nombre
-// Además de poder guardar varias configuraciones, pueden aceptar parametros
-// Le pasamos los parametros y decimos a que devería aplicarse, luego al "llamar a la función" debemos pasarle los o el valor.
+// Componentes
+@use "sass/componentes";
 
-$text-color: #2b2b2b;
-// Así se declaran las variables en scss
-body {
-    padding: 0;
-    margin: 0;
-}
+// Mixins
+@use "sass/mixins";
 
-.container {
-    width: 100%;
-    background-color: azure;
-    min-height: 100vh;
-    padding: .5rem;
-}
+// Estilos
+@use "sass/estilos";
 
-h1 {
-    margin: 0;
-    @include formato-texto();
-}
+// Páginas
+// páginas principal
+// páginas de contacto
+// páginas de aviso legal
 
-p {
-    @include formato-texto(#666666);
-}
+// actualmente se utiliza de otra manera, se maneja desde la consola:
+// Una vez instalado con npm install -g sass -> sass --watch styles.scss(archivo Como se llama en este caso) styles.css (output) 
 
-// Si (por ejemplo) tenemos una lista, sass nos permite "anidar" entre ellos de una manera más "legible"
-.listado {
-    width: 10rem;
-    background-color: aquamarine;
-    padding: .5rem;
-    
-    ul {
-        margin: 0 .5rem;
+// La instalación se realiza para dejar de utilizar el import y comenzar a utilizar el 'use'
 
-        li {
-            list-style: none;
-// Podemos también hacer uso de subclases como hover, after, before, etc. añdiendo según que querramos afectar en la anidación, '&:hover'
-            &:hover {
-                color: white;
-            }
-        }
-    }
-}
+// use: nos crea un 'namespace'
+// por defecto, el nombre del namespace es el mismo que el de la carpeta. Pero podemos cambiarlo usando 'as' Ej: @use "sass/componentes" as comp;
+// también, aunque es poco recomendado, tenemos el '*' lo cual nos deja una variable global que se podría acceder con el simbolo del dolar$ como si lo usaramos dentro del import
