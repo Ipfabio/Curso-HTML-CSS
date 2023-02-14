@@ -1,0 +1,107 @@
+//// Funciones con cadenas de texto
+@use "sass:string";
+@use "sass:math";
+@use "sass:list";
+@use "sass:selector";
+@use "sass:color";
+
+@debug "hola";
+@debug string.index("Helvetica Neue", "Neue");
+//// Devuelve la función index, (ubica el indice de lo que se busca)
+
+$string: "Helvetica";
+$newString: string.insert($string, " Bold", 10);
+//// Inserta lo que le pasamos en el inidice indicado
+
+@debug $newString;
+@debug string.length($newString);
+@debug string.slice($newString, 5, 9);
+// Corta y devuelve el "pedazo" de string
+
+@debug string.to-upper-case("Roboto Mono");
+
+@debug string.unique-id();
+
+//// Funciones con números
+
+@debug math.$e;
+@debug math.$pi;
+
+@debug math.floor(4.6);
+// Redondea hacia abajo
+@debug math.ceil(4.5);
+// Redondea hacia arriba
+@debug math.round(4.4);
+// Redondea hacia el número entero más cercano
+
+
+@debug math.clamp(0, 9,10); // le pasamos un min y un max, en el medio añadimos un rango que debe estar entre ambos, si no, devuelve o el min o el max
+// Nos puede ayudar a hacer "más" responsive nuestra página, calculando tamaños de fuentes, anchos, alturas, etc. (también las unidades)
+
+@debug math.max(3,4,6,10,2,399);
+// Devuelve el valor max de la lista
+@debug math.min(3,4,6,10,2,399);
+// Devuelve el valor min de la lista
+
+@debug math.abs(8);
+@debug math.abs(-8);
+// nos devuelve el absoluto
+
+@debug math.pow(2, 12);
+// nos eleva el número que le pasamos al valor que le damos. También podemos pasarle funciones para elevar
+
+@debug math.cos(math.$pi);
+@debug math.sin(math.$pi);
+@debug math.tan(math.$pi);
+
+//// Funciones con listas
+$lista1: 10px, 10px, 0px, 15px;
+
+@debug $lista1;
+@debug list.append($lista1, 25px);
+// Añade el valor
+@debug list.append($lista1, 25px, space);
+// Cambia la separación por comas a espacios
+
+$border-custom: solid 1px #ccc;
+@debug list.index($border-custom, 1px); // 2
+@debug list.index($border-custom, 2px); // null
+
+// $border-2: [solid, 1px, #ccc];
+// @debug list.is-bracketed($border-2);
+
+@debug list.join($lista1, $border-custom, auto); // listas y separador
+@debug list.length(list.join($lista1, $border-custom, auto)); // largo de listas unidas
+@debug list.separator($border-custom);
+@debug list.separator(list.join($lista1, $border-custom, auto));
+
+@debug list.set-nth($border-custom, 2, 2px);// cambia el valor en el indice indicado (lista, indice, valor)
+
+//// Funciones de selector
+$selector-1: "a";
+$selector-2: ".disabled";
+@debug selector.append($selector-1, $selector-2);
+
+//// Funciones de color
+$color: rgb(226, 81, 255);
+@debug color.adjust($color, $red: -50, $alpha: -.5); // realiza los ajustes y deuelve su valor
+$color-2: rgb(176, 81, 255, 0.5);
+
+@debug color.complement($color); // genera el color complementario del que le pasamos
+$color-comp: #6eff51;
+
+@debug darken($color, 20%); // oscurece
+$color-dark: #c300ea;
+@debug lighten($color, 20%); // aclara
+$color-dark: #f3b7ff;
+
+@debug color.red($color);
+@debug color.red($color);
+@debug color.red($color);
+
+@debug color.hue($color); // En que angulo está en el cirulo de colores
+
+@debug color.invert($color);
+$color-ing: #1dae00;
+
+// Esta color.mix, opacity, fade-in, saturate

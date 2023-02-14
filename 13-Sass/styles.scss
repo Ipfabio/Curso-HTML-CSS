@@ -20,3 +20,6 @@
 // use: nos crea un 'namespace'
 // por defecto, el nombre del namespace es el mismo que el de la carpeta. Pero podemos cambiarlo usando 'as' Ej: @use "sass/componentes" as comp;
 // también, aunque es poco recomendado, tenemos el '*' lo cual nos deja una variable global que se podría acceder con el simbolo del dolar$ como si lo usaramos dentro del import
+
+// Otros
+@use "sass/builtin";
